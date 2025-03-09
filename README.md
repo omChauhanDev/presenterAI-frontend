@@ -1,8 +1,8 @@
-# Presenter AI
+# Meeting Co-pilot
 
 *Your documents, explained by AI. Anytime, anywhere.*
 
-Presenter AI is a revolutionary platform that transforms how you present documents to clients. Upload your presentations or PDFs once, and our AI agent will explain them to your clients on your behalf - answering questions, highlighting key points, and providing visual references, all through an interactive voice and video experience.
+Meeting Co-pilot is a revolutionary platform that transforms how you present documents to clients. Upload your presentations or PDFs once, and our AI agent will explain them to your clients on your behalf - answering questions, highlighting key points, and providing visual references, all through an interactive voice and video experience.
 
 ## The Problem We Solve
 
@@ -12,7 +12,7 @@ As professionals, we often:
 - Need to be available for every client meeting
 - Struggle to maintain consistency across presentations
 
-**Presenter AI handles all this for you, giving you back your time while ensuring your clients receive consistent, high-quality explanations.**
+**Meeting Co-pilot handles all this for you, giving you back your time while ensuring your clients receive consistent, high-quality explanations.**
 
 ## Key Features
 
@@ -22,42 +22,43 @@ As professionals, we often:
 - **Simple Sharing**: Just share a link for clients to join the presentation session
 - **No Downloads Required**: Works entirely in the browser
 - **Always Available**: Your clients can schedule sessions at their convenience
-- **Consistent Messaging**: Ensure your information is presented the same way every time
 
 ## How It Works
 
 1. **Upload** your presentation or PDF to our platform
-2. We **train** an AI agent on your specific document
-3. You receive a **unique link** to share with your clients
-4. Clients **join** a live session where our AI presents your document
-5. The AI **explains** each slide and **answers** any questions
-6. The AI provides **visual references** from your document during explanations
-
-## Perfect For
-
-- **Financial Advisors** explaining investment strategies
-- **Legal Professionals** walking clients through standard documents
-- **Real Estate Agents** presenting property information
-- **Sales Teams** delivering consistent product presentations
-- **HR Departments** explaining policies and procedures
-- **Educational Institutions** delivering standard course material
-- **Insurance Agents** explaining policy details
+2. **Ingestion**: System processes the document by extracting text and generating visual references
+3. **Indexing**: Content is organized in a vector database for efficient semantic search
+4. **Link Sharing**: You receive a unique link to share with clients
+5. **Client Session**: Clients join a live session where our AI presents your document
+6. **Interactive Q&A**: AI explains slides and answers questions using the indexed content
 
 ## Technology
 
-Presenter AI is built using cutting-edge technology:
+Meeting Co-pilot is built using cutting-edge technology:
 
-- **LiveKit**: Powering real-time voice and video communication
 - **Next.js**: Creating a responsive, modern web interface
-- **AI Document Understanding**: Processing and comprehending your documents
-- **Speech Recognition & Synthesis**: Enabling natural conversations
-- **Computer Vision**: Identifying and displaying relevant visual content
+- **LiveKit**: Powering real-time voice and video communication
+- **TypeScript**: Type-safe code for robust development
+- **Tailwind CSS**: Utility-first styling approach
+
+### Backend Services
+
+Meeting Co-pilot connects to a powerful backend that provides:
+
+- **RAG-Enabled Presentation**: Contextual understanding of your documents
+- **Voice Interaction**: Natural language processing for spoken queries
+- **Semantic Search**: Finding the most relevant content for questions
+- **PDF/PowerPoint Processing**: Automatic extraction and preparation of documents
+- **OpenAI Integration**: For embeddings, text generation, and speech synthesis
+- **Deepgram**: For accurate speech recognition
+
+*For details on setting up the backend services, please refer to the backend repository.*
 
 ## Getting Started
 
 ### For Document Owners
 
-1. **Sign up** for a Presenter AI account
+1. **Sign up** for a Meeting Co-pilot account
 2. **Upload** your presentation or PDF
 3. **Configure** your preferences (AI voice, presentation style)
 4. **Share** your unique presentation link with clients
@@ -73,65 +74,30 @@ Presenter AI is built using cutting-edge technology:
 
 ## Technical Implementation
 
-This repository contains the frontend implementation of Presenter AI, built with:
+This repository contains the frontend implementation of Meeting Co-pilot, built with:
 
 - **Next.js**: React framework for the application
 - **LiveKit**: Real-time voice and video communication
 - **TypeScript**: Type-safe code for robust development
 - **Tailwind CSS**: Utility-first styling approach
 
-### Project Structure
-
-```
-.
-├── app/
-│   ├── api/
-│   │   └── connection-details/
-│   │       └── route.ts      # LiveKit token generation
-│   ├── layout.tsx
-│   └── page.tsx              # Main presentation UI
-├── components/
-│   ├── AgentDetector.tsx     # AI agent detection
-│   ├── AgentVideoDisplay.tsx # Document visualization
-│   ├── AudioVisualizer.tsx   # Voice feedback visualization
-│   └── ControlBar.tsx        # User controls
-├── public/
-├── styles/
-└── configuration files
-```
-
 ### Setup for Development
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/presenter-ai.git
-   cd presenter-ai
-   ```
+   git clone https://github.com/yourusername/meeting-co-pilot.git
+   cd meeting-co-pilot
 
 2. Install dependencies:
    ```bash
    pnpm install
-   ```
 
-3. Set up environment variables (see `.env.example`)
-
+3. Set up environment variables (see .env.example)
+   
 4. Run the development server:
    ```bash
    pnpm run dev
-   ```
+Open http://localhost:3000 in your browser  
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Roadmap
-
-- **Custom AI Voice Options**: Choose from multiple voice profiles
-- **Multilingual Support**: Present in multiple languages
-- **Advanced Analytics**: Gain insights into client engagement
-- **Branching Presentations**: Allow for different paths based on client interests
-- **Integration with CRMs**: Connect with your existing client management systems
-- **Enterprise SSO**: Secure authentication for large organizations
-- **Collaborative Mode**: Allow multiple presenters (human + AI)
-
-**Presenter AI** — Your documents, expertly explained, every time.
-
-*For support or inquiries: work@omchauhan.in*
+**Meeting Co-pilot** — Your documents, expertly explained, every time.  
+For support or inquiries: work@omchauhan.in
